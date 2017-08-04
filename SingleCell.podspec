@@ -4,12 +4,13 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SingleCell"
-  s.version      = "0.1.0"
-  s.summary      = "Custom UI control that simulates appearance of UITableViewCell, but can be as a single control without UITableView."
+  s.version      = "0.2.0"
+  s.summary      = "Custom UI control that simulates appearance of UITableViewCell, but can be used as a single control without UITableView."
 
   # This description is used to generate tags and improve search results.
-  s.description  = <<-DESC
-                   DESC
+  s.description = <<-DESC
+Custom UI control that simulates appearance of UITableViewCell, but can be used as a single control without UITableView. It comprises of a main label, optional image on the left and optional detail view on the right. Also, it can show disclosure icon on the right side. Layout of all elements is provided by auto-layout constraints. SingleCell can be placed, previewed and configured in the interface builder.
+DESC
 
   s.homepage     = "https://github.com/andrewredko/SingleCell"
 
