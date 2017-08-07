@@ -12,8 +12,6 @@
 		AF8FF6B01F384D940015E1D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF8FF6AE1F384D940015E1D6 /* Main.storyboard */; };
 		AF8FF6B21F384D940015E1D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF8FF6B11F384D940015E1D6 /* Assets.xcassets */; };
 		AF8FF6B51F384D940015E1D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF8FF6B31F384D940015E1D6 /* LaunchScreen.storyboard */; };
-		AF8FF6C01F384D940015E1D6 /* SingleCell_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8FF6BF1F384D940015E1D6 /* SingleCell_DemoTests.swift */; };
-		AF8FF6CB1F384D940015E1D6 /* SingleCell_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8FF6CA1F384D940015E1D6 /* SingleCell_DemoUITests.swift */; };
 		AF8FF6E11F38521A0015E1D6 /* SingleCell.h in Headers */ = {isa = PBXBuildFile; fileRef = AF8FF6DF1F38521A0015E1D6 /* SingleCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF8FF6E41F38521A0015E1D6 /* SingleCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8FF6DD1F38521A0015E1D6 /* SingleCell.framework */; };
 		AF8FF6E51F38521A0015E1D6 /* SingleCell.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF8FF6DD1F38521A0015E1D6 /* SingleCell.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -25,20 +23,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AF8FF6BC1F384D940015E1D6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AF8FF69F1F384D940015E1D6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AF8FF6A61F384D940015E1D6;
-			remoteInfo = "SingleCell-Demo";
-		};
-		AF8FF6C71F384D940015E1D6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AF8FF69F1F384D940015E1D6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AF8FF6A61F384D940015E1D6;
-			remoteInfo = "SingleCell-Demo";
-		};
 		AF8FF6E21F38521A0015E1D6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AF8FF69F1F384D940015E1D6 /* Project object */;
@@ -70,12 +54,6 @@
 		AF8FF6B11F384D940015E1D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF8FF6B41F384D940015E1D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF8FF6B61F384D940015E1D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF8FF6BB1F384D940015E1D6 /* SingleCell-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SingleCell-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF8FF6BF1F384D940015E1D6 /* SingleCell_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCell_DemoTests.swift; sourceTree = "<group>"; };
-		AF8FF6C11F384D940015E1D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF8FF6C61F384D940015E1D6 /* SingleCell-DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SingleCell-DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF8FF6CA1F384D940015E1D6 /* SingleCell_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCell_DemoUITests.swift; sourceTree = "<group>"; };
-		AF8FF6CC1F384D940015E1D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF8FF6DD1F38521A0015E1D6 /* SingleCell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SingleCell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8FF6DF1F38521A0015E1D6 /* SingleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleCell.h; sourceTree = "<group>"; };
 		AF8FF6E01F38521A0015E1D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,20 +73,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF8FF6B81F384D940015E1D6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AF8FF6C31F384D940015E1D6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AF8FF6D91F38521A0015E1D6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -123,8 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				AF8FF6A91F384D940015E1D6 /* SingleCell-Demo */,
-				AF8FF6BE1F384D940015E1D6 /* SingleCell-DemoTests */,
-				AF8FF6C91F384D940015E1D6 /* SingleCell-DemoUITests */,
 				AF8FF6DE1F38521A0015E1D6 /* SingleCell */,
 				AF8FF6A81F384D940015E1D6 /* Products */,
 			);
@@ -134,8 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				AF8FF6A71F384D940015E1D6 /* SingleCell-Demo.app */,
-				AF8FF6BB1F384D940015E1D6 /* SingleCell-DemoTests.xctest */,
-				AF8FF6C61F384D940015E1D6 /* SingleCell-DemoUITests.xctest */,
 				AF8FF6DD1F38521A0015E1D6 /* SingleCell.framework */,
 			);
 			name = Products;
@@ -152,24 +112,6 @@
 				AF8FF6B61F384D940015E1D6 /* Info.plist */,
 			);
 			path = "SingleCell-Demo";
-			sourceTree = "<group>";
-		};
-		AF8FF6BE1F384D940015E1D6 /* SingleCell-DemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				AF8FF6BF1F384D940015E1D6 /* SingleCell_DemoTests.swift */,
-				AF8FF6C11F384D940015E1D6 /* Info.plist */,
-			);
-			path = "SingleCell-DemoTests";
-			sourceTree = "<group>";
-		};
-		AF8FF6C91F384D940015E1D6 /* SingleCell-DemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				AF8FF6CA1F384D940015E1D6 /* SingleCell_DemoUITests.swift */,
-				AF8FF6CC1F384D940015E1D6 /* Info.plist */,
-			);
-			path = "SingleCell-DemoUITests";
 			sourceTree = "<group>";
 		};
 		AF8FF6DE1F38521A0015E1D6 /* SingleCell */ = {
@@ -236,42 +178,6 @@
 			productReference = AF8FF6A71F384D940015E1D6 /* SingleCell-Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AF8FF6BA1F384D940015E1D6 /* SingleCell-DemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AF8FF6D21F384D940015E1D6 /* Build configuration list for PBXNativeTarget "SingleCell-DemoTests" */;
-			buildPhases = (
-				AF8FF6B71F384D940015E1D6 /* Sources */,
-				AF8FF6B81F384D940015E1D6 /* Frameworks */,
-				AF8FF6B91F384D940015E1D6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AF8FF6BD1F384D940015E1D6 /* PBXTargetDependency */,
-			);
-			name = "SingleCell-DemoTests";
-			productName = "SingleCell-DemoTests";
-			productReference = AF8FF6BB1F384D940015E1D6 /* SingleCell-DemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		AF8FF6C51F384D940015E1D6 /* SingleCell-DemoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AF8FF6D51F384D940015E1D6 /* Build configuration list for PBXNativeTarget "SingleCell-DemoUITests" */;
-			buildPhases = (
-				AF8FF6C21F384D940015E1D6 /* Sources */,
-				AF8FF6C31F384D940015E1D6 /* Frameworks */,
-				AF8FF6C41F384D940015E1D6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AF8FF6C81F384D940015E1D6 /* PBXTargetDependency */,
-			);
-			name = "SingleCell-DemoUITests";
-			productName = "SingleCell-DemoUITests";
-			productReference = AF8FF6C61F384D940015E1D6 /* SingleCell-DemoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		AF8FF6DC1F38521A0015E1D6 /* SingleCell */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF8FF6E81F38521A0015E1D6 /* Build configuration list for PBXNativeTarget "SingleCell" */;
@@ -305,18 +211,6 @@
 						DevelopmentTeam = P4ZU86AQQ4;
 						ProvisioningStyle = Automatic;
 					};
-					AF8FF6BA1F384D940015E1D6 = {
-						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = P4ZU86AQQ4;
-						ProvisioningStyle = Automatic;
-						TestTargetID = AF8FF6A61F384D940015E1D6;
-					};
-					AF8FF6C51F384D940015E1D6 = {
-						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = P4ZU86AQQ4;
-						ProvisioningStyle = Automatic;
-						TestTargetID = AF8FF6A61F384D940015E1D6;
-					};
 					AF8FF6DC1F38521A0015E1D6 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = P4ZU86AQQ4;
@@ -339,8 +233,6 @@
 			projectRoot = "";
 			targets = (
 				AF8FF6A61F384D940015E1D6 /* SingleCell-Demo */,
-				AF8FF6BA1F384D940015E1D6 /* SingleCell-DemoTests */,
-				AF8FF6C51F384D940015E1D6 /* SingleCell-DemoUITests */,
 				AF8FF6DC1F38521A0015E1D6 /* SingleCell */,
 			);
 		};
@@ -354,20 +246,6 @@
 				AF8FF6B51F384D940015E1D6 /* LaunchScreen.storyboard in Resources */,
 				AF8FF6B21F384D940015E1D6 /* Assets.xcassets in Resources */,
 				AF8FF6B01F384D940015E1D6 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AF8FF6B91F384D940015E1D6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AF8FF6C41F384D940015E1D6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,22 +268,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF8FF6B71F384D940015E1D6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AF8FF6C01F384D940015E1D6 /* SingleCell_DemoTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AF8FF6C21F384D940015E1D6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AF8FF6CB1F384D940015E1D6 /* SingleCell_DemoUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AF8FF6D81F38521A0015E1D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -421,16 +283,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AF8FF6BD1F384D940015E1D6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AF8FF6A61F384D940015E1D6 /* SingleCell-Demo */;
-			targetProxy = AF8FF6BC1F384D940015E1D6 /* PBXContainerItemProxy */;
-		};
-		AF8FF6C81F384D940015E1D6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AF8FF6A61F384D940015E1D6 /* SingleCell-Demo */;
-			targetProxy = AF8FF6C71F384D940015E1D6 /* PBXContainerItemProxy */;
-		};
 		AF8FF6E31F38521A0015E1D6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AF8FF6DC1F38521A0015E1D6 /* SingleCell */;
@@ -581,64 +433,6 @@
 			};
 			name = Release;
 		};
-		AF8FF6D31F384D940015E1D6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = P4ZU86AQQ4;
-				INFOPLIST_FILE = "SingleCell-DemoTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.andrewredko.SingleCell-DemoTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SingleCell-Demo.app/SingleCell-Demo";
-			};
-			name = Debug;
-		};
-		AF8FF6D41F384D940015E1D6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = P4ZU86AQQ4;
-				INFOPLIST_FILE = "SingleCell-DemoTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.andrewredko.SingleCell-DemoTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SingleCell-Demo.app/SingleCell-Demo";
-			};
-			name = Release;
-		};
-		AF8FF6D61F384D940015E1D6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = P4ZU86AQQ4;
-				INFOPLIST_FILE = "SingleCell-DemoUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.andrewredko.SingleCell-DemoUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = "SingleCell-Demo";
-			};
-			name = Debug;
-		};
-		AF8FF6D71F384D940015E1D6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = P4ZU86AQQ4;
-				INFOPLIST_FILE = "SingleCell-DemoUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.andrewredko.SingleCell-DemoUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = "SingleCell-Demo";
-			};
-			name = Release;
-		};
 		AF8FF6E61F38521A0015E1D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -705,24 +499,6 @@
 			buildConfigurations = (
 				AF8FF6D01F384D940015E1D6 /* Debug */,
 				AF8FF6D11F384D940015E1D6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AF8FF6D21F384D940015E1D6 /* Build configuration list for PBXNativeTarget "SingleCell-DemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AF8FF6D31F384D940015E1D6 /* Debug */,
-				AF8FF6D41F384D940015E1D6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AF8FF6D51F384D940015E1D6 /* Build configuration list for PBXNativeTarget "SingleCell-DemoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AF8FF6D61F384D940015E1D6 /* Debug */,
-				AF8FF6D71F384D940015E1D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
