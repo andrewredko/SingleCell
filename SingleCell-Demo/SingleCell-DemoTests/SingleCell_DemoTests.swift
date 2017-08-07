@@ -1,15 +1,15 @@
 //
-//  SingleCellTests.swift
-//  SingleCellTests
+//  SingleCell_DemoTests.swift
+//  SingleCell-DemoTests
 //
-//  Created by master on 8/3/17.
-//  Copyright © 2017 Andrew Redko. All rights reserved.
+//  Created by Andrew Redko on 9/27/2016.
+//  Copyright © 2016 Andrew Redko. All rights reserved.
 //
 
 import XCTest
-@testable import SingleCell
+@testable import SingleCell_Demo
 
-class SingleCellTests: XCTestCase {
+class SingleCell_DemoTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

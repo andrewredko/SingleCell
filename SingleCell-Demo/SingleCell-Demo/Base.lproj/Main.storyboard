@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SingleCell_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6I-EU-vr0">
+                                <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBn-7e-W4D" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="537.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BCA-iX-ih0" customClass="SingleCell" customModule="SingleCell">
+                                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="HRh-FR-AJs"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="Bluetooth"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Single cell"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="bordersType">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iKR-du-Mbq" customClass="ValueSingleCell" customModule="SingleCell">
+                                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="Mxv-PT-RdR"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Value single cell"/>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="Location"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="bordersType">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a1V-eo-zun" customClass="SwitchSingleCell" customModule="SingleCell">
+                                                <rect key="frame" x="0.0" y="108" width="320" height="44"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="GKz-KS-XR0"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Switch single cell"/>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="WiFi"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="bordersType">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kp4-mp-zcw" customClass="InputSingleCell" customModule="SingleCell">
+                                                <rect key="frame" x="0.0" y="188" width="320" height="44"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="9R4-AA-RU5"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Input single cell"/>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="TextSize"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="detailNormalColor">
+                                                        <color key="value" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="detailHighlightedColor">
+                                                        <color key="value" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="detailSelectedColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bkgdSelectedColor">
+                                                        <color key="value" red="0.43921568630000002" green="0.75686274509999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHOW / HIDE CONTENT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnB-Tv-MUZ">
+                                                <rect key="frame" x="15" y="272" width="290" height="17"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="17" id="GK2-87-puM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.3529411764705882" green="0.3529411764705882" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="snB-Ql-OHh" userLabel="Show image" customClass="SwitchSingleCell" customModule="SingleCell">
+                                                <rect key="frame" x="0.0" y="296" width="320" height="44"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="uYA-Mp-29x"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Show image"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="bordersType">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showDisclosure" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="showImageValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="2rZ-Pq-V8y"/>
+                                                </connections>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqL-Ru-iBh" userLabel="Show detail view" customClass="SwitchSingleCell" customModule="SingleCell">
+                                                <rect key="frame" x="0.0" y="340" width="320" height="44"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="g0b-uB-Qpa"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Show detail view"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="bordersType">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showDisclosure" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="showDetailViewValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="VC7-3K-3b1"/>
+                                                </connections>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Uz-W7-lgO" userLabel="Show disclosure" customClass="SwitchSingleCell" customModule="SingleCell">
+                                                <rect key="frame" x="0.0" y="384" width="320" height="44"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="qZL-xY-sli"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Show disclosure"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="bordersType">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showDisclosure" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="showDisclosureValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="og8-kX-B8z"/>
+                                                </connections>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action result message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ag8-B3-UrV">
+                                                <rect key="frame" x="15" y="465" width="290" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="iKR-du-Mbq" firstAttribute="leading" secondItem="xBn-7e-W4D" secondAttribute="leading" id="1a9-la-cf2"/>
+                                            <constraint firstItem="kp4-mp-zcw" firstAttribute="top" secondItem="a1V-eo-zun" secondAttribute="bottom" constant="36" id="385-F6-dVO"/>
+                                            <constraint firstAttribute="bottom" secondItem="ag8-B3-UrV" secondAttribute="bottom" constant="52" id="566-QW-VQ8"/>
+                                            <constraint firstAttribute="trailing" secondItem="ag8-B3-UrV" secondAttribute="trailing" constant="15" id="64W-ba-gsc"/>
+                                            <constraint firstItem="BCA-iX-ih0" firstAttribute="top" secondItem="xBn-7e-W4D" secondAttribute="top" constant="20" id="6zt-lX-P3m"/>
+                                            <constraint firstAttribute="trailing" secondItem="iKR-du-Mbq" secondAttribute="trailing" id="9DA-La-wGq"/>
+                                            <constraint firstAttribute="trailing" secondItem="8Uz-W7-lgO" secondAttribute="trailing" id="D2Y-sF-V95"/>
+                                            <constraint firstItem="kp4-mp-zcw" firstAttribute="leading" secondItem="xBn-7e-W4D" secondAttribute="leading" id="DDI-al-wCB"/>
+                                            <constraint firstItem="a1V-eo-zun" firstAttribute="leading" secondItem="xBn-7e-W4D" secondAttribute="leading" id="IKv-fK-Smx"/>
+                                            <constraint firstAttribute="trailing" secondItem="a1V-eo-zun" secondAttribute="trailing" id="IL5-nf-JqY"/>
+                                            <constraint firstAttribute="trailing" secondItem="snB-Ql-OHh" secondAttribute="trailing" id="VAg-d0-KO3"/>
+                                            <constraint firstItem="ag8-B3-UrV" firstAttribute="leading" secondItem="xBn-7e-W4D" secondAttribute="leading" constant="15" id="Wum-cr-HeP"/>
+                                            <constraint firstItem="a1V-eo-zun" firstAttribute="top" secondItem="iKR-du-Mbq" secondAttribute="bottom" id="X6w-A2-ZGj"/>
+                                            <constraint firstItem="ag8-B3-UrV" firstAttribute="top" secondItem="8Uz-W7-lgO" secondAttribute="bottom" constant="37" id="Xfm-JO-2eD"/>
+                                            <constraint firstItem="snB-Ql-OHh" firstAttribute="top" secondItem="fnB-Tv-MUZ" secondAttribute="bottom" constant="7" id="dWT-PE-T4u"/>
+                                            <constraint firstAttribute="trailing" secondItem="kp4-mp-zcw" secondAttribute="trailing" id="eCp-M5-jGu"/>
+                                            <constraint firstItem="snB-Ql-OHh" firstAttribute="leading" secondItem="xBn-7e-W4D" secondAttribute="leading" id="eEY-YD-WIb"/>
+                                            <constraint firstItem="8Uz-W7-lgO" firstAttribute="leading" secondItem="xBn-7e-W4D" secondAttribute="leading" id="fGP-jT-tdV"/>
+                                            <constraint firstItem="iKR-du-Mbq" firstAttribute="top" secondItem="BCA-iX-ih0" secondAttribute="bottom" id="h5e-6F-8Vn"/>
+                                            <constraint firstItem="pqL-Ru-iBh" firstAttribute="top" secondItem="snB-Ql-OHh" secondAttribute="bottom" id="hkK-e6-s8c"/>
+                                            <constraint firstItem="fnB-Tv-MUZ" firstAttribute="leading" secondItem="xBn-7e-W4D" secondAttribute="leading" constant="15" id="iDv-ub-cM6"/>
+                                            <constraint firstAttribute="trailing" secondItem="pqL-Ru-iBh" secondAttribute="trailing" id="mhF-TY-pWm"/>
+                                            <constraint firstItem="BCA-iX-ih0" firstAttribute="leading" secondItem="xBn-7e-W4D" secondAttribute="leading" id="pk0-j8-xNq"/>
+                                            <constraint firstAttribute="trailing" secondItem="BCA-iX-ih0" secondAttribute="trailing" id="pvS-b3-zga"/>
+                                            <constraint firstAttribute="trailing" secondItem="fnB-Tv-MUZ" secondAttribute="trailing" constant="15" id="sEP-dK-XH2"/>
+                                            <constraint firstItem="fnB-Tv-MUZ" firstAttribute="top" secondItem="kp4-mp-zcw" secondAttribute="bottom" constant="40" id="thM-uH-Nkp"/>
+                                            <constraint firstItem="8Uz-W7-lgO" firstAttribute="top" secondItem="pqL-Ru-iBh" secondAttribute="bottom" id="wGx-0o-w9j"/>
+                                            <constraint firstItem="pqL-Ru-iBh" firstAttribute="leading" secondItem="xBn-7e-W4D" secondAttribute="leading" id="yQf-tH-fjn"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="xBn-7e-W4D" firstAttribute="top" secondItem="y6I-EU-vr0" secondAttribute="top" id="BEq-pY-fRj"/>
+                                    <constraint firstAttribute="trailing" secondItem="xBn-7e-W4D" secondAttribute="trailing" id="Bih-4m-Wfi"/>
+                                    <constraint firstAttribute="bottom" secondItem="xBn-7e-W4D" secondAttribute="bottom" id="SP4-f3-41N"/>
+                                    <constraint firstItem="xBn-7e-W4D" firstAttribute="leading" secondItem="y6I-EU-vr0" secondAttribute="leading" id="xhz-Tr-0ed"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="y6I-EU-vr0" secondAttribute="trailing" id="1gv-wu-NnZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="y6I-EU-vr0" secondAttribute="bottom" id="5b8-q4-xbm"/>
+                            <constraint firstItem="xBn-7e-W4D" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="6r2-c6-TTs"/>
+                            <constraint firstItem="y6I-EU-vr0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="9E7-SS-GWM"/>
+                            <constraint firstItem="xBn-7e-W4D" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" priority="250" id="Xqz-b4-QB5"/>
+                            <constraint firstItem="y6I-EU-vr0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kRQ-B2-7EL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="actionResultLabel" destination="ag8-B3-UrV" id="sXh-jK-vey"/>
+                        <outlet property="inputSingleCell" destination="kp4-mp-zcw" id="bMJ-f4-wwd"/>
+                        <outlet property="singleCell" destination="BCA-iX-ih0" id="IDG-VW-5MJ"/>
+                        <outlet property="switchSingleCell" destination="a1V-eo-zun" id="6hG-Hd-PMX"/>
+                        <outlet property="valueSingleCell" destination="iKR-du-Mbq" id="Vs2-4L-eD1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Bluetooth" width="29" height="29"/>
+        <image name="Location" width="29" height="29"/>
+        <image name="TextSize" width="29" height="29"/>
+        <image name="WiFi" width="29" height="29"/>
+    </resources>
+</document>

@@ -2,8 +2,8 @@
 //  SingleCell.h
 //  SingleCell
 //
-//  Created by master on 8/3/17.
-//  Copyright © 2017 Andrew Redko. All rights reserved.
+//  Created by Andrew Redko on 7/27/17.
+//  Copyright © 2016 Andrew Redko. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
