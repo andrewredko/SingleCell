@@ -142,9 +142,9 @@ open class SwitchSingleCell : SingleCell {
     
     private func setCHCRPriorities() {
         // Set hugging priority greater than of textLabel, so switch does not stretch
-        switchControl.setContentHuggingPriority(252, for: .horizontal)
+        switchControl.setContentHuggingPriority(UILayoutPriority(252), for: .horizontal)
         // Set resistance priority greater than of textLabel, so switch does not shrink
-        switchControl.setContentCompressionResistancePriority(751, for: .horizontal)
+        switchControl.setContentCompressionResistancePriority(UILayoutPriority(751), for: .horizontal)
     }
     
     private func setDefaultValues() {

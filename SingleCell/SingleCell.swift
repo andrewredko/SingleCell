@@ -449,13 +449,13 @@ open class SingleCell : UIControl {
     }
     
     private func setCHCRPriorities() {
-        imageView.setContentHuggingPriority(252, for: .horizontal)
-        textLabel.setContentHuggingPriority(251, for: .horizontal)
-        disclosureImageView.setContentHuggingPriority(252, for: .horizontal)
+        imageView.setContentHuggingPriority(UILayoutPriority(252), for: .horizontal)
+        textLabel.setContentHuggingPriority(UILayoutPriority(251), for: .horizontal)
+        disclosureImageView.setContentHuggingPriority(UILayoutPriority(252), for: .horizontal)
         
-        imageView.setContentCompressionResistancePriority(752, for: .horizontal)
-        textLabel.setContentCompressionResistancePriority(750, for: .horizontal)
-        disclosureImageView.setContentCompressionResistancePriority(752, for: .horizontal)
+        imageView.setContentCompressionResistancePriority(UILayoutPriority(752), for: .horizontal)
+        textLabel.setContentCompressionResistancePriority(UILayoutPriority(750), for: .horizontal)
+        disclosureImageView.setContentCompressionResistancePriority(UILayoutPriority(752), for: .horizontal)
     }
     
     private func addPermanentLayoutConstraints() {

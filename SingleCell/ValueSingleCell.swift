@@ -185,8 +185,8 @@ open class ValueSingleCell : SingleCell, SingleCellDetailSetable {
     private func setupDetailTextLabel() {
         detailTextLabel.translatesAutoresizingMaskIntoConstraints = false
         detailTextLabel.textAlignment = .right
-        detailTextLabel.setContentHuggingPriority(250, for: .horizontal)
-        detailTextLabel.setContentCompressionResistancePriority(751, for: .horizontal)
+        detailTextLabel.setContentHuggingPriority(UILayoutPriority(250), for: .horizontal)
+        detailTextLabel.setContentCompressionResistancePriority(UILayoutPriority(751), for: .horizontal)
     }
     
     private func setDefaultValues() {
