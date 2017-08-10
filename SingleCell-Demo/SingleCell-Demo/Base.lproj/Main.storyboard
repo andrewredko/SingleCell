@@ -35,7 +35,7 @@
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="Bluetooth"/>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Single cell"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Single Cell"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="bordersType">
                                                         <integer key="value" value="4"/>
                                                     </userDefinedRuntimeAttribute>
@@ -48,7 +48,7 @@
                                                     <constraint firstAttribute="height" constant="44" id="Mxv-PT-RdR"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Value single cell"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Value Single Cell"/>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="Location"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="bordersType">
                                                         <integer key="value" value="5"/>
@@ -62,8 +62,8 @@
                                                     <constraint firstAttribute="height" constant="44" id="GKz-KS-XR0"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Switch single cell"/>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="WiFi"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Switch Single Cell"/>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="Wi-Fi"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="bordersType">
                                                         <integer key="value" value="3"/>
                                                     </userDefinedRuntimeAttribute>
@@ -76,7 +76,7 @@
                                                     <constraint firstAttribute="height" constant="44" id="9R4-AA-RU5"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Input single cell"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Input Single Cell"/>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="TextSize"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="detailNormalColor">
                                                         <color key="value" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
@@ -111,7 +111,7 @@
                                                     <constraint firstAttribute="height" constant="44" id="uYA-Mp-29x"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Show image"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Show Image"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="bordersType">
                                                         <integer key="value" value="2"/>
                                                     </userDefinedRuntimeAttribute>
@@ -128,7 +128,7 @@
                                                     <constraint firstAttribute="height" constant="44" id="g0b-uB-Qpa"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Show detail view"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Show Detail View"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="bordersType">
                                                         <integer key="value" value="0"/>
                                                     </userDefinedRuntimeAttribute>
@@ -145,7 +145,7 @@
                                                     <constraint firstAttribute="height" constant="44" id="qZL-xY-sli"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Show disclosure"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Show Disclosure"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="bordersType">
                                                         <integer key="value" value="3"/>
                                                     </userDefinedRuntimeAttribute>
@@ -230,6 +230,6 @@
         <image name="Bluetooth" width="29" height="29"/>
         <image name="Location" width="29" height="29"/>
         <image name="TextSize" width="29" height="29"/>
-        <image name="WiFi" width="29" height="29"/>
+        <image name="Wi-Fi" width="29" height="29"/>
     </resources>
 </document>

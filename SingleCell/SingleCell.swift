@@ -77,7 +77,7 @@ open class SingleCell : UIControl {
      */
     open class Defaults {
         
-        open static var text = "Text label"
+        open static var text = "Text Label"
         
         open static var image: UIImage? = nil
         
