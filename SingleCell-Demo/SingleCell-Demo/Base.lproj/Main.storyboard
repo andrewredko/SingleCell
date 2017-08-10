@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBn-7e-W4D" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="537.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="581.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BCA-iX-ih0" customClass="SingleCell" customModule="SingleCell">
                                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -48,7 +48,7 @@
                                                     <constraint firstAttribute="height" constant="44" id="Mxv-PT-RdR"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Value Single Cell"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Cell With Value"/>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="Location"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="bordersType">
                                                         <integer key="value" value="5"/>
@@ -62,7 +62,7 @@
                                                     <constraint firstAttribute="height" constant="44" id="GKz-KS-XR0"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Switch Single Cell"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Cell With Switch"/>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="Wi-Fi"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="bordersType">
                                                         <integer key="value" value="3"/>
@@ -76,7 +76,7 @@
                                                     <constraint firstAttribute="height" constant="44" id="9R4-AA-RU5"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Input Single Cell"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Cell With Input View"/>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="TextSize"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="detailNormalColor">
                                                         <color key="value" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
@@ -105,7 +105,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="snB-Ql-OHh" userLabel="Show image" customClass="SwitchSingleCell" customModule="SingleCell">
-                                                <rect key="frame" x="0.0" y="296" width="375" height="44"/>
+                                                <rect key="frame" x="0.0" y="384" width="375" height="44"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="uYA-Mp-29x"/>
@@ -113,7 +113,7 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Show Image"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="bordersType">
-                                                        <integer key="value" value="2"/>
+                                                        <integer key="value" value="0"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="showDisclosure" value="NO"/>
                                                 </userDefinedRuntimeAttributes>
@@ -122,7 +122,7 @@
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqL-Ru-iBh" userLabel="Show detail view" customClass="SwitchSingleCell" customModule="SingleCell">
-                                                <rect key="frame" x="0.0" y="340" width="375" height="44"/>
+                                                <rect key="frame" x="0.0" y="296" width="375" height="44"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="g0b-uB-Qpa"/>
@@ -130,7 +130,7 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Show Detail View"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="bordersType">
-                                                        <integer key="value" value="0"/>
+                                                        <integer key="value" value="2"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="showDisclosure" value="NO"/>
                                                 </userDefinedRuntimeAttributes>
@@ -139,7 +139,7 @@
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Uz-W7-lgO" userLabel="Show disclosure" customClass="SwitchSingleCell" customModule="SingleCell">
-                                                <rect key="frame" x="0.0" y="384" width="375" height="44"/>
+                                                <rect key="frame" x="0.0" y="340" width="375" height="44"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="qZL-xY-sli"/>
@@ -147,7 +147,7 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Show Disclosure"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="bordersType">
-                                                        <integer key="value" value="3"/>
+                                                        <integer key="value" value="0"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="showDisclosure" value="NO"/>
                                                 </userDefinedRuntimeAttributes>
@@ -155,8 +155,26 @@
                                                     <action selector="showDisclosureValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="og8-kX-B8z"/>
                                                 </connections>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hhd-Qq-RSd" userLabel="Dark Theme" customClass="SwitchSingleCell" customModule="SingleCell">
+                                                <rect key="frame" x="0.0" y="428" width="375" height="44"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="yEa-12-INB"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="bordersType">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showDisclosure" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isOn" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Dark Color Theme"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="darkThemeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Yve-xt-aVb"/>
+                                                </connections>
+                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action result message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ag8-B3-UrV">
-                                                <rect key="frame" x="15" y="465" width="345" height="20.5"/>
+                                                <rect key="frame" x="15" y="509" width="345" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -174,17 +192,20 @@
                                             <constraint firstItem="kp4-mp-zcw" firstAttribute="leading" secondItem="xBn-7e-W4D" secondAttribute="leading" id="DDI-al-wCB"/>
                                             <constraint firstItem="a1V-eo-zun" firstAttribute="leading" secondItem="xBn-7e-W4D" secondAttribute="leading" id="IKv-fK-Smx"/>
                                             <constraint firstAttribute="trailing" secondItem="a1V-eo-zun" secondAttribute="trailing" id="IL5-nf-JqY"/>
+                                            <constraint firstItem="Hhd-Qq-RSd" firstAttribute="leading" secondItem="xBn-7e-W4D" secondAttribute="leading" id="ORk-41-c0e"/>
+                                            <constraint firstItem="Hhd-Qq-RSd" firstAttribute="top" secondItem="snB-Ql-OHh" secondAttribute="bottom" id="Ou6-qS-wJc"/>
                                             <constraint firstAttribute="trailing" secondItem="snB-Ql-OHh" secondAttribute="trailing" id="VAg-d0-KO3"/>
                                             <constraint firstItem="ag8-B3-UrV" firstAttribute="leading" secondItem="xBn-7e-W4D" secondAttribute="leading" constant="15" id="Wum-cr-HeP"/>
                                             <constraint firstItem="a1V-eo-zun" firstAttribute="top" secondItem="iKR-du-Mbq" secondAttribute="bottom" id="X6w-A2-ZGj"/>
-                                            <constraint firstItem="ag8-B3-UrV" firstAttribute="top" secondItem="8Uz-W7-lgO" secondAttribute="bottom" constant="37" id="Xfm-JO-2eD"/>
-                                            <constraint firstItem="snB-Ql-OHh" firstAttribute="top" secondItem="fnB-Tv-MUZ" secondAttribute="bottom" constant="7" id="dWT-PE-T4u"/>
+                                            <constraint firstAttribute="trailing" secondItem="Hhd-Qq-RSd" secondAttribute="trailing" id="XPB-7Z-B4l"/>
+                                            <constraint firstItem="snB-Ql-OHh" firstAttribute="top" secondItem="8Uz-W7-lgO" secondAttribute="bottom" id="dWT-PE-T4u"/>
                                             <constraint firstAttribute="trailing" secondItem="kp4-mp-zcw" secondAttribute="trailing" id="eCp-M5-jGu"/>
                                             <constraint firstItem="snB-Ql-OHh" firstAttribute="leading" secondItem="xBn-7e-W4D" secondAttribute="leading" id="eEY-YD-WIb"/>
                                             <constraint firstItem="8Uz-W7-lgO" firstAttribute="leading" secondItem="xBn-7e-W4D" secondAttribute="leading" id="fGP-jT-tdV"/>
                                             <constraint firstItem="iKR-du-Mbq" firstAttribute="top" secondItem="BCA-iX-ih0" secondAttribute="bottom" id="h5e-6F-8Vn"/>
-                                            <constraint firstItem="pqL-Ru-iBh" firstAttribute="top" secondItem="snB-Ql-OHh" secondAttribute="bottom" id="hkK-e6-s8c"/>
+                                            <constraint firstItem="pqL-Ru-iBh" firstAttribute="top" secondItem="fnB-Tv-MUZ" secondAttribute="bottom" constant="7" id="hkK-e6-s8c"/>
                                             <constraint firstItem="fnB-Tv-MUZ" firstAttribute="leading" secondItem="xBn-7e-W4D" secondAttribute="leading" constant="15" id="iDv-ub-cM6"/>
+                                            <constraint firstItem="ag8-B3-UrV" firstAttribute="top" secondItem="Hhd-Qq-RSd" secondAttribute="bottom" constant="37" id="kXq-j0-ZUG"/>
                                             <constraint firstAttribute="trailing" secondItem="pqL-Ru-iBh" secondAttribute="trailing" id="mhF-TY-pWm"/>
                                             <constraint firstItem="BCA-iX-ih0" firstAttribute="leading" secondItem="xBn-7e-W4D" secondAttribute="leading" id="pk0-j8-xNq"/>
                                             <constraint firstAttribute="trailing" secondItem="BCA-iX-ih0" secondAttribute="trailing" id="pvS-b3-zga"/>
@@ -215,7 +236,11 @@
                     </view>
                     <connections>
                         <outlet property="actionResultLabel" destination="ag8-B3-UrV" id="sXh-jK-vey"/>
+                        <outlet property="darkColorThemeCell" destination="Hhd-Qq-RSd" id="mNo-Ya-2he"/>
                         <outlet property="inputSingleCell" destination="kp4-mp-zcw" id="bMJ-f4-wwd"/>
+                        <outlet property="showDetailViewCell" destination="pqL-Ru-iBh" id="Inb-km-JDQ"/>
+                        <outlet property="showDisclosureCell" destination="8Uz-W7-lgO" id="NLT-Zq-aAq"/>
+                        <outlet property="showImageCell" destination="snB-Ql-OHh" id="rrm-1Y-vJW"/>
                         <outlet property="singleCell" destination="BCA-iX-ih0" id="IDG-VW-5MJ"/>
                         <outlet property="switchSingleCell" destination="a1V-eo-zun" id="6hG-Hd-PMX"/>
                         <outlet property="valueSingleCell" destination="iKR-du-Mbq" id="Vs2-4L-eD1"/>

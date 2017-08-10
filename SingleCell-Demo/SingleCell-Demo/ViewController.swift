@@ -11,13 +11,21 @@ import SingleCell
 
 class ViewController: UIViewController {
     
-    //MARK: - outlets & actions
+    //MARK: - outlets
     
     @IBOutlet weak var singleCell: SingleCell!
     @IBOutlet weak var valueSingleCell: ValueSingleCell!
     @IBOutlet weak var switchSingleCell: SwitchSingleCell!
     @IBOutlet weak var inputSingleCell: InputSingleCell!
     @IBOutlet weak var actionResultLabel: UILabel!
+    
+    @IBOutlet weak var showDetailViewCell: SwitchSingleCell!
+    @IBOutlet weak var showDisclosureCell: SwitchSingleCell!
+    @IBOutlet weak var showImageCell: SwitchSingleCell!
+    @IBOutlet weak var darkColorThemeCell: SwitchSingleCell!
+    
+    
+    //MARK: - show content actions
     
     private var singleCellInitImage: UIImage!
     private var valueSingleCellInitImage: UIImage!
@@ -71,6 +79,87 @@ class ViewController: UIViewController {
     }
     
     
+    //MARK: - dark theme action
+    
+    @IBAction func darkThemeChanged(_ sender: SwitchSingleCell) {
+        let isDark = sender.isOn
+        if isDark {
+            setDarkColorTheme()
+        }
+        else {
+            setDefaultColorTheme()
+        }
+    }
+    
+    private func setDefaultColorTheme() {
+        setDefaultColorTheme(onCell: singleCell)
+        setDefaultColorTheme(onCell: valueSingleCell)
+        setDefaultColorTheme(onCell: switchSingleCell)
+        setDefaultColorTheme(onCell: inputSingleCell)
+    
+        setDefaultColorTheme(onCell: showImageCell)
+        setDefaultColorTheme(onCell: showDetailViewCell)
+        setDefaultColorTheme(onCell: showDisclosureCell)
+        setDefaultColorTheme(onCell: darkColorThemeCell)
+        
+        self.view.backgroundColor = UIColor(red: 239 / 255.0, green: 239 / 255.0, blue: 244 / 255.0, alpha: 1.0)
+        
+        setStatusBarStyle(isDarkTheme: false)
+    }
+
+    private func setDarkColorTheme() {
+        setDarkColorTheme(onCell: singleCell)
+        setDarkColorTheme(onCell: valueSingleCell)
+        setDarkColorTheme(onCell: switchSingleCell)
+        setDarkColorTheme(onCell: inputSingleCell)
+        
+        setDarkColorTheme(onCell: showImageCell)
+        setDarkColorTheme(onCell: showDetailViewCell)
+        setDarkColorTheme(onCell: showDisclosureCell)
+        setDarkColorTheme(onCell: darkColorThemeCell)
+        
+        self.view.backgroundColor = UIColor(white: 0.05, alpha: 1.0)
+        
+        setStatusBarStyle(isDarkTheme: true)
+    }
+    
+    private func setDefaultColorTheme(onCell cell: SingleCell) {
+        cell.bkgdNormalColor = nil
+        cell.bordersColor    = nil
+        cell.textNormalColor = nil
+        cell.disclosureColor = nil
+        
+        if let cell = cell as? ValueSingleCell {
+            cell.detailNormalColor = nil
+        }
+        else if let cell = cell as? SwitchSingleCell {
+            cell.onTintColor = nil
+        }
+        
+        if let cell = cell as? InputSingleCell {
+            cell.detailNormalColor = UIColor(red: 48 / 255.0, green: 131 / 255.0, blue: 251 / 255.0, alpha: 1.0)
+        }
+    }
+    
+    private func setDarkColorTheme(onCell cell: SingleCell) {
+        cell.bkgdNormalColor = UIColor(white: 0.10, alpha: 1.0)
+        cell.bordersColor    = UIColor(white: 0.18, alpha: 1.0)
+        cell.textNormalColor = UIColor(white: 0.84, alpha: 1.0)
+        cell.disclosureColor = UIColor(red: 204 / 255.0, green: 204 / 255.0, blue: 206 / 255.0, alpha: 1.0)
+        
+        if let cell = cell as? ValueSingleCell {
+            cell.detailNormalColor = UIColor(white: 0.84, alpha: 1.0)
+        }
+        else if let cell = cell as? SwitchSingleCell {
+            cell.onTintColor = UIColor(red: 57 / 255.0, green: 139 / 255.0, blue: 247 / 255.0, alpha: 1.0)
+        }
+    }
+    
+    private func setStatusBarStyle(isDarkTheme: Bool) {
+        UIApplication.shared.statusBarStyle = isDarkTheme ? .lightContent : .default
+    }
+    
+    
     //MARK: - setup
     
     override func viewDidLoad() {
@@ -88,10 +177,10 @@ class ViewController: UIViewController {
     
     private func setupDatePicker() {
         dateFormatter.locale = Locale.current
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
+        dateFormatter.dateStyle = .none
+        dateFormatter.timeStyle = .short
         
-        datePicker.datePickerMode = .date
+        datePicker.datePickerMode = .time
         datePicker.addTarget(self, action: #selector(pickerDateChanged), for: .valueChanged)
     }
     
