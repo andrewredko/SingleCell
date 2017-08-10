@@ -52,9 +52,11 @@ public enum SingleCellBordersType : Int {
  a main label, optional image on the left and optional detail view on the right.
  Also, it can show disclosure icon on the right side.
  
- Layout of all elements is provided by auto-layout constraints.
+ Layout of all sub-views is provided by layout constraints. Thus, SingleCell
+ can be used to build Auto Layout interface that supports different screen
+ sizes, orientations and Split Screen mode.
  
- SingleCell can be placed, previewed and configured in the interface builder.
+ SingleCell can be placed, previewed and configured in Interface Builder.
  */
 @IBDesignable
 open class SingleCell : UIControl {
