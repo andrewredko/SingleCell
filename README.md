@@ -1,4 +1,4 @@
-# SingleCell, a standalone UITableViewCell-like controls for iOS
+# SingleCell, standalone UITableViewCell-like controls for iOS
 
 A family of custom iOS `UIControls` that simulate appearance of `UITableViewCell`, but can be used by their own, as single controls, without `UITableView`. One SingleCell comprises of a main label, optional image on the left and optional detail view on the right. Also, it can show disclosure icon on the right side.
 
@@ -9,7 +9,7 @@ There are different subclasses of SingleCell that you can use:
 
 - **InputSingleCell** – extends ValueSingleCell class by allowing to set an input view for editing of the detail label text.
 
-Using SingleCell controls allows to speed up development of the UI interface.
+Using SingleCell controls allows to speed up development of the user interface.
 
 ![SingleCell Example](Readme_files/Images/SingleCell_Demo.gif)
 
