@@ -33,18 +33,66 @@ struct Utils {
     
     static let pixelSize: CGFloat = 1.0 / UIScreen.main.scale
     
+    
+    //MARK: - draw arrow image
+    
+    private struct Arrow {
+        
+        static let size = CGSize(width: 8, height: 14)
+        
+        static let lineWidth: CGFloat = 2.0
+        
+        static let points = [
+            CGPoint(x: 0.75, y: 1.0),
+            CGPoint(x: 6.75, y: 7.0),
+            CGPoint(x: 0.75, y: 13.0)
+        ]
+    }
+    
     static func arrowImage(color: UIColor) -> UIImage {
-        let renderer = UIGraphicsImageRenderer(size: CGSize(width: 8, height: 14))
+        
+        if #available(iOS 10, *) {
+            return drawArrowImageUsingRenderer(color: color)
+        }
+        else {
+            return drawArrowImageUsingCoreGraphics(color: color)
+        }
+    }
+    
+    @available(iOS 10, *)
+    private static func drawArrowImageUsingRenderer(color: UIColor) -> UIImage {
+        
+        let renderer = UIGraphicsImageRenderer(size: Arrow.size)
         let img = renderer.image { ctx in
             ctx.cgContext.setStrokeColor(color.cgColor)
-            ctx.cgContext.setLineWidth(2)
+            ctx.cgContext.setLineWidth(Arrow.lineWidth)
             
-            ctx.cgContext.move(to: CGPoint(x: 0.75, y: 1))
-            ctx.cgContext.addLine(to: CGPoint(x: 6.75, y: 7))
-            ctx.cgContext.addLine(to: CGPoint(x: 0.75, y: 13))
+            ctx.cgContext.move(to:    Arrow.points[0])
+            ctx.cgContext.addLine(to: Arrow.points[1])
+            ctx.cgContext.addLine(to: Arrow.points[2])
             
             ctx.cgContext.strokePath()
         }
+        return img
+    }
+    
+    private static func drawArrowImageUsingCoreGraphics(color: UIColor) -> UIImage {
+        
+        UIGraphicsBeginImageContextWithOptions(Arrow.size, false, 0.0)
+        let ctx = UIGraphicsGetCurrentContext()!
+        
+        ctx.setStrokeColor(color.cgColor)
+        ctx.setLineWidth(Arrow.lineWidth)
+        
+        ctx.move(to:    Arrow.points[0])
+        ctx.addLine(to: Arrow.points[1])
+        ctx.addLine(to: Arrow.points[2])
+
+        ctx.strokePath()
+        
+        let img = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
         return img
     }
 }

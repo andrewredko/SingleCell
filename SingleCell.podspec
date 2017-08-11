@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name     = "SingleCell"
-  s.version  = "0.3.0"
+  s.version  = "0.4.0"
   s.summary  = "Custom UI control that simulates appearance of UITableViewCell, but can be used as a single control without UITableView."
 
   s.description = <<-DESC
@@ -13,7 +13,7 @@ DESC
   s.homepage  = "https://github.com/andrewredko/SingleCell"
 
   s.platform  = :ios
-  s.ios.deployment_target = "10.0"
+  s.ios.deployment_target = "9.0"
 
   s.source = { :git => "https://github.com/andrewredko/SingleCell.git", :tag => "#{s.version}" }
   s.source_files  = "SingleCell/**/*.{swift}"
