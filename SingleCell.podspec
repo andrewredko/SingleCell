@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name     = "SingleCell"
-  s.version  = "1.0.0"
+  s.version  = "1.0.1"
   s.summary  = "Custom UI control that simulates appearance of UITableViewCell, but can be used as a single control without UITableView."
 
   s.description = <<-DESC
