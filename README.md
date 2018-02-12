@@ -24,7 +24,7 @@ Layout of all sub-views is provided by layout constraints. Thus, SingleCell can 
 ## Installation
 Use `CocoaPods` and add SingleCell to your `Podfile`:
 ```ruby
-pod 'SingleCell', '~> '1.0.0'
+pod 'SingleCell', '~> 1.0.0'
 ```
 
 Or install manually by copying everything from SingleCell/ directory into your Xcode project.
