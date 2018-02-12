@@ -11,7 +11,12 @@ import SingleCell
 
 class ViewController: UIViewController {
     
-    //MARK: - outlets
+    // MARK: - Private vars
+    
+    private let datePicker = UIDatePicker()
+    private let dateFormatter = DateFormatter()
+    
+    // MARK: - IBOutlets
     
     @IBOutlet weak var singleCell: SingleCell!
     @IBOutlet weak var valueSingleCell: ValueSingleCell!
@@ -25,7 +30,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var darkColorThemeCell: SwitchSingleCell!
     
     
-    //MARK: - show content actions
+    // MARK: - Show Content IBActions
     
     private var singleCellInitImage: UIImage!
     private var valueSingleCellInitImage: UIImage!
@@ -41,8 +46,7 @@ class ViewController: UIViewController {
             valueSingleCell.image = valueSingleCellInitImage
             switchSingleCell.image = switchSingleCellInitImage
             inputSingleCell.image = inputSingleCellInitImage
-        }
-        else {
+        } else {
             singleCell.image = nil
             valueSingleCell.image = nil
             switchSingleCell.image = nil
@@ -62,8 +66,7 @@ class ViewController: UIViewController {
             valueSingleCell.detailText = ValueSingleCell.Defaults.detailText
             switchSingleCell.showSwitch = true
             inputSingleCell.detailText = InputSingleCell.Defaults.detailText
-        }
-        else {
+        } else {
             valueSingleCell.detailText = nil
             switchSingleCell.showSwitch = false
             inputSingleCell.detailText = nil
@@ -79,14 +82,13 @@ class ViewController: UIViewController {
     }
     
     
-    //MARK: - dark theme action
+    // MARK: - Dark Theme IBAction
     
     @IBAction func darkThemeChanged(_ sender: SwitchSingleCell) {
         let isDark = sender.isOn
         if isDark {
             setDarkColorTheme()
-        }
-        else {
+        } else {
             setDefaultColorTheme()
         }
     }
@@ -131,13 +133,13 @@ class ViewController: UIViewController {
         
         if let cell = cell as? ValueSingleCell {
             cell.detailNormalColor = nil
-        }
-        else if let cell = cell as? SwitchSingleCell {
+        } else if let cell = cell as? SwitchSingleCell {
             cell.onTintColor = nil
         }
         
         if let cell = cell as? InputSingleCell {
-            cell.detailNormalColor = UIColor(red: 48 / 255.0, green: 131 / 255.0, blue: 251 / 255.0, alpha: 1.0)
+            cell.detailNormalColor = UIColor(red: 48 / 255.0, green: 131 / 255.0,
+                                             blue: 251 / 255.0, alpha: 1.0)
         }
     }
     
@@ -145,13 +147,14 @@ class ViewController: UIViewController {
         cell.bkgdNormalColor = UIColor(white: 0.10, alpha: 1.0)
         cell.bordersColor    = UIColor(white: 0.18, alpha: 1.0)
         cell.textNormalColor = UIColor(white: 0.84, alpha: 1.0)
-        cell.disclosureColor = UIColor(red: 204 / 255.0, green: 204 / 255.0, blue: 206 / 255.0, alpha: 1.0)
+        cell.disclosureColor = UIColor(red: 204 / 255.0, green: 204 / 255.0,
+                                       blue: 206 / 255.0, alpha: 1.0)
         
         if let cell = cell as? ValueSingleCell {
             cell.detailNormalColor = UIColor(white: 0.84, alpha: 1.0)
-        }
-        else if let cell = cell as? SwitchSingleCell {
-            cell.onTintColor = UIColor(red: 57 / 255.0, green: 139 / 255.0, blue: 247 / 255.0, alpha: 1.0)
+        } else if let cell = cell as? SwitchSingleCell {
+            cell.onTintColor = UIColor(red: 57 / 255.0, green: 139 / 255.0,
+                                       blue: 247 / 255.0, alpha: 1.0)
         }
     }
     
@@ -160,20 +163,15 @@ class ViewController: UIViewController {
     }
     
     
-    //MARK: - setup
+    // MARK: - Setup
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupDatePicker()
-        
         setupInputSingleCell()
-        
-        addActionsForTouchEvents()
+        assignActionsToTouchEvents()
     }
-    
-    private let datePicker = UIDatePicker()
-    private let dateFormatter = DateFormatter()
     
     private func setupDatePicker() {
         dateFormatter.locale = Locale.current
@@ -220,7 +218,7 @@ class ViewController: UIViewController {
         }
     }
     
-    private func addActionsForTouchEvents() {
+    private func assignActionsToTouchEvents() {
         // Standard "addTarget" is used to subscribe to touch events
         singleCell.addTarget(self, action: #selector(cellTouched), for: .touchUpInside)
         switchSingleCell.addTarget(self, action: #selector(cellTouched), for: .touchUpInside)
@@ -230,19 +228,20 @@ class ViewController: UIViewController {
     
     @objc private func cellTouched(_ sender: SingleCell) {
         self.actionResultLabel.alpha = 1.0
-        self.actionResultLabel.text = "\"\(sender.text!)\" touched"
+        self.actionResultLabel.text = "\"\(sender.text!)\" tapped."
         
         // Hide message after some delay
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.3, execute: {
-            UIView.animate(withDuration: 0.5, animations: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+            UIView.animate(withDuration: 0.2, animations: {
                 self.actionResultLabel.alpha = 0.0
             })
         })
     }
+    
 }
 
 
-//MARK: - UITextFieldDelegate
+// MARK: - UITextFieldDelegate
 
 extension ViewController : UITextFieldDelegate {
     
@@ -258,4 +257,3 @@ extension ViewController : UITextFieldDelegate {
     }
     
 }
-

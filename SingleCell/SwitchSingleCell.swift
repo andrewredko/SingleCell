@@ -58,7 +58,7 @@ open class SwitchSingleCell : SingleCell {
     }
     
     
-    //MARK: - content properties
+    // MARK: - Content Properties
     
     private let switchControl = UISwitch()
     
@@ -67,8 +67,7 @@ open class SwitchSingleCell : SingleCell {
         didSet {
             if showSwitch {
                 detailView = switchControl
-            }
-            else {
+            } else {
                 detailView = nil
             }
         }
@@ -86,7 +85,7 @@ open class SwitchSingleCell : SingleCell {
     }
     
     
-    //MARK: - appearance
+    // MARK: - Appearance
     
     @IBInspectable
     open var onTintColor: UIColor! {
@@ -110,15 +109,7 @@ open class SwitchSingleCell : SingleCell {
     }
     
     
-    //MARK: - event-handling
-    
-    // Allow subsribing to valueChanged event of the switch control
-    @objc private func sendValueChangedEvent() {
-        self.sendActions(for: .valueChanged)
-    }
-    
-    
-    //MARK: - initializers
+    // MARK: - Initializers
     
     public required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -136,7 +127,6 @@ open class SwitchSingleCell : SingleCell {
         switchControl.addTarget(self, action: #selector(sendValueChangedEvent), for: .valueChanged)
         
         setCHCRPriorities()
-        
         setDefaultValues()
     }
     
@@ -153,4 +143,12 @@ open class SwitchSingleCell : SingleCell {
         onTintColor = nil
         thumbTintColor = nil
     }
+    
+    // MARK: - Event-handling
+    
+    // Allow subsribing to valueChanged event of the switch control
+    @objc private func sendValueChangedEvent() {
+        self.sendActions(for: .valueChanged)
+    }
+
 }

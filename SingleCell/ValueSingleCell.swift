@@ -63,7 +63,7 @@ open class ValueSingleCell : SingleCell, SingleCellDetailSetable {
     }
     
     
-    //MARK: - content properties
+    // MARK: - Content Properties
     
     let detailTextLabel = UILabel()
     
@@ -74,22 +74,19 @@ open class ValueSingleCell : SingleCell, SingleCellDetailSetable {
             
             if detailText != nil {
                 detailView = detailTextLabel
-            }
-            else {
+            } else {
                 detailView = nil
             }
         }
     }
     
     
-    //MARK: - appearance
+    // MARK: - Appearance
     
-    /**
-     Font of the detail label.
-     - Note: The property can be set only programmatically.
-     It is not exposed to Interface Builder, because Xcode IB
-     still does not support custom properties of the Font type.
-     */
+    /// Font of the detail label.
+    /// - Note: The property can be set only programmatically.
+    /// It is not exposed to Interface Builder, because Xcode IB
+    /// still does not support custom properties of the Font type.
     open var detailTextFont: UIFont! {
         didSet {
             detailTextFont = detailTextFont ?? Defaults.detailTextFont
@@ -137,48 +134,41 @@ open class ValueSingleCell : SingleCell, SingleCellDetailSetable {
         }
     }
     
-    // Use polymorphism to customize highlight behavior
     override func setAppearanceForHighlighted(_ isHighlighted:Bool) {
         super.setAppearanceForHighlighted(isHighlighted)
         
         if isHighlighted {
             self.detailTextLabel.textColor = self.detailHighlightedColor
-        }
-        else {
+        } else {
             self.detailTextLabel.textColor = self.detailNormalColor
         }
     }
     
-    // Use polymorphism to customize disabled appearance
     override func setAppearanceForEnabled(_ isEnabled:Bool) {
         super.setAppearanceForEnabled(isEnabled)
         
         if isEnabled {
             detailTextLabel.textColor = self.detailNormalColor
-        }
-        else {
+        } else {
             detailTextLabel.textColor = self.detailDisabledColor
         }
     }
     
     
-    //MARK: - initializers
+    // MARK: - Initializers
     
     public required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
         commonInit()
     }
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        
         commonInit()
     }
     
     private func commonInit() {
         setupDetailTextLabel()
-        
         setDefaultValues()
     }
     
@@ -199,4 +189,5 @@ open class ValueSingleCell : SingleCell, SingleCellDetailSetable {
         detailDisabledColor = nil
         detailSelectedColor = nil
     }
+    
 }

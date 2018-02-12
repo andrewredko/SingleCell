@@ -30,19 +30,12 @@
 import UIKit
 
 public enum SingleCellBordersType : Int {
-    
     case no = 0
-    
     case both = 1
-    
     case top = 2
-    
     case bottom = 3
-    
     case groupFirst = 4
-    
     case groupMiddle = 5
-    
     case groupLast = 6
 }
 
@@ -79,6 +72,8 @@ open class SingleCell : UIControl {
      */
     open class Defaults {
         
+        fileprivate static let borderHeight = Utils.pixelSize
+        
         open static var text = "Text Label"
         
         open static var image: UIImage? = nil
@@ -92,8 +87,6 @@ open class SingleCell : UIControl {
         open static var bordersType = 1  // .both
         
         open static var bordersColor = UIColor(white: 0.75, alpha: 1.0)
-        
-        fileprivate static let borderHeight = Utils.pixelSize
         
         open static var textFont = UIFont.systemFont(ofSize: 17.0)
         
@@ -115,11 +108,11 @@ open class SingleCell : UIControl {
     }
     
     
-    //MARK: - content properties
+    // MARK: - Content Properties
     
     let textLabel = UILabel()
     
-    /** Text of the main label. */
+    /// Text of the main label.
     @IBInspectable
     open var text: String? {
         didSet {
@@ -129,10 +122,8 @@ open class SingleCell : UIControl {
     
     let imageView = UIImageView()
     
-    /**
-     Image appearing on the left from the main label.
-     - Note: To hide an image, set it to nil.
-     */
+    /// Image appearing on the left from the main label.
+    /// - Note: To hide an image, set it to nil.
     @IBInspectable
     open var image: UIImage? {
         didSet {
@@ -148,25 +139,21 @@ open class SingleCell : UIControl {
         if image != nil {
             self.addSubview(imageView)
             
-            // Re-create imageView constraints
             addImageViewConstraints()
             
             // Update constraints for presence of imageView
             setTextLabelLeadingConstraint(toAnchor: imageView.trailingAnchor)
-        }
-        else {
-            // Update constraints for absence of imageView
+
+        } else {
             setTextLabelLeadingConstraint(toAnchor: self.leadingAnchor)
             // There is no need to remove imageView constraints, because
             // they are removed automatically when the view is removedFromSuperview
         }
     }
     
-    /**
-     View appearing on the right from the main label and
-     before the disclosureImage.
-     - Note: To hide a view, set it to nil.
-     */
+    /// View appearing on the right from the main label and
+    /// before the disclosureImage.
+    /// - Note: To hide a view, set it to nil.
     open var detailView: UIView? {
         didSet {
             setDetailView(detailView, oldView:oldValue)
@@ -174,7 +161,6 @@ open class SingleCell : UIControl {
     }
     
     private func setDetailView(_ view:UIView?, oldView:UIView?) {
-        // If there was a view before, then remove it
         oldView?.removeFromSuperview()
         
         // Check if there is a new detailView and
@@ -182,24 +168,17 @@ open class SingleCell : UIControl {
         if let view = view {
             self.addSubview(view)
             
-            // Re-create detailView constraints
             addDetailViewConstraints(view)
-            
-            // Update constraints for presence of detailView
             setDisclosureIconLeadingConstraint(toAnchor: view.trailingAnchor)
-        }
-        else {
-            // Update constraints for absence of detailView
+        } else {
             setDisclosureIconLeadingConstraint(toAnchor: textLabel.trailingAnchor)
         }
     }
     
     let disclosureImageView = UIImageView()
     
-    /**
-     Changes the color of the disclosureImage.
-     - Note: Changing the image itself is not provided.
-     */
+    /// Changes the color of the disclosureImage.
+    /// - Note: Changing the image itself is not provided.
     @IBInspectable
     open var disclosureColor: UIColor! {
         didSet {
@@ -208,8 +187,8 @@ open class SingleCell : UIControl {
         }
     }
     
-    // IB fails to get discloseImage.size.width value, so it is hardcoded.
-    // Hardcode is fine, because disclosureImage size should not be changed.
+    // IB fails to get discloseImage.size.width value, so it is hardcoded. Hardcode
+    // is not a problem here, because disclosureImage size should not change.
     private let disclosureImageWidth: CGFloat = 8
     
     @IBInspectable
@@ -224,8 +203,7 @@ open class SingleCell : UIControl {
             // Set constraints to show icon
             disclosureImageView.isHidden = false
             disclosureImageLeadingContraint.constant = spacer
-        }
-        else {
+        } else {
             // Set constraints to hide icon
             disclosureImageView.isHidden = true
             disclosureImageLeadingContraint.constant = -disclosureImageWidth
@@ -233,14 +211,12 @@ open class SingleCell : UIControl {
     }
     
     
-    //MARK: - appearance
+    // MARK: - Appearance
     
-    /**
-     Font of the main label.
-     - Note: The property can be set only programmatically.
-     It is not exposed to Interface Builder, because Xcode IB
-     still does not support custom properties of the Font type.
-     */
+    /// Font of the main label.
+    /// - Note: The property can be set only programmatically.
+    /// It is not exposed to Interface Builder, because Xcode IB
+    /// still does not support custom properties of the Font type.
     open var textFont: UIFont! {
         didSet {
             textFont = textFont ?? Defaults.textFont
@@ -329,7 +305,7 @@ open class SingleCell : UIControl {
     }
     
     
-    //MARK: - state appearance
+    // MARK: - State Appearance
     
     override open var isHighlighted: Bool {
         didSet {
@@ -343,13 +319,11 @@ open class SingleCell : UIControl {
         if isHighlighted {
             self.backgroundColor = self.bkgdHighlightedColor
             self.textLabel.textColor = self.textHighlightedColor
-        }
-        else {
+        } else {
             self.backgroundColor = self.bkgdNormalColor
             self.textLabel.textColor = self.textNormalColor
         }
     }
-    
     
     override open var isEnabled: Bool {
         didSet {
@@ -363,8 +337,7 @@ open class SingleCell : UIControl {
             textLabel.textColor = self.textNormalColor
             imageView.alpha = 1.0
             disclosureImageView.alpha = 1.0
-        }
-        else {
+        } else {
             backgroundColor = self.bkgdDisabledColor
             textLabel.textColor = self.textDisabledColor
             imageView.alpha = 0.5
@@ -373,7 +346,7 @@ open class SingleCell : UIControl {
     }
     
     
-    //MARK: - initializers
+    // MARK: - Initializers
     
     public required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -391,19 +364,14 @@ open class SingleCell : UIControl {
         self.addSubview(disclosureImageView)
         
         addPermanentLayoutConstraints()
-        
         setCHCRPriorities()
-        
         setupBorders()
-        
         setDefaultValues()
     }
     
     private func setDefaultValues() {
         text = nil
-        
         image = Defaults.image
-        
         detailView = nil
         
         disclosureColor = nil
@@ -426,7 +394,7 @@ open class SingleCell : UIControl {
     }
     
     
-    //MARK: - constraints
+    // MARK: - Constraints
     
     private var imageViewLeadingContraint: NSLayoutConstraint!
     private var textLabelLeadingContraint: NSLayoutConstraint!
@@ -434,8 +402,8 @@ open class SingleCell : UIControl {
     private var disclosureImageLeadingContraint: NSLayoutConstraint!
     private var disclosureImageTrailingContraint: NSLayoutConstraint!
     
-    /** Horizontal distance between each UI element (i.e. image, text,
-     detailView and disclosureImage). */
+    /// Horizontal distance between each UI element (i.e. image, text,
+    /// detailView and disclosureImage).
     @IBInspectable
     open var spacer: CGFloat = Defaults.spacer {
         didSet {
@@ -459,7 +427,6 @@ open class SingleCell : UIControl {
     }
     
     private func addPermanentLayoutConstraints() {
-        // Using auto-layout
         textLabel.translatesAutoresizingMaskIntoConstraints = false
         imageView.translatesAutoresizingMaskIntoConstraints = false
         disclosureImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -501,7 +468,7 @@ open class SingleCell : UIControl {
     }
     
     
-    //MARK: - borders
+    // MARK: - Borders
     
     private var topBorder = UIView()
     private var bottomBorder = UIView()
@@ -510,7 +477,7 @@ open class SingleCell : UIControl {
     @IBInspectable
     open var bordersType: Int = 1 {
         didSet {
-            guard 0 ... 6 ~= bordersType  else {
+            guard 0 ... 6 ~= bordersType else {
                 fatalError("Unknown borders type")
             }
             showBorders(SingleCellBordersType(rawValue: bordersType)!)
@@ -528,7 +495,7 @@ open class SingleCell : UIControl {
     }
     
     private func showBorders(_ borders: SingleCellBordersType) {
-        // Firstly hide all
+        // Firstly, hide all
         topBorder.isHidden = true
         bottomBorder.isHidden = true
         bottomShortBorder.isHidden = true

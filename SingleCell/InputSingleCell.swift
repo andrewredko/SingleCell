@@ -41,20 +41,18 @@ import UIKit
 @IBDesignable
 open class InputSingleCell : ValueSingleCell {
     
-    //MARK: - content properties
+    // MARK: - Content Properties
     
     // Place hidden text field outside of the visible area.
     // Set its frame to any size, but must not be CGRect.null
     private let hiddenTextField = UITextField(frame: CGRect(x:9999, y:1, width:0, height:0))
     
     
-    //MARK: - state appearance
+    // MARK: - State Appearance
     
-    /**
-     Change button appearence to look as selected while being in
-     an input mode. Set to true when button becomes a first responder.
-     Set to false when resigning from the first responder.
-     */
+    /// Change button appearence to look as selected while being in
+    /// an input mode. Set to true when button becomes a first responder.
+    /// Set to false when resigning from the first responder.
     override open var isSelected: Bool {
         didSet {
             setBackgroundForSelected(isSelected)
@@ -66,26 +64,23 @@ open class InputSingleCell : ValueSingleCell {
             backgroundColor = bkgdSelectedColor
             textLabel.textColor = textSelectedColor
             detailTextLabel.textColor = detailSelectedColor
-        }
-        else {
+        } else {
             backgroundColor = bkgdNormalColor
             textLabel.textColor = textNormalColor
             detailTextLabel.textColor = detailNormalColor
         }
     }
     
-    // Use polymorphism to customize highlight behavior
     override func setAppearanceForHighlighted(_ isHighlighted:Bool) {
         if isHighlighted {
             self.backgroundColor = bkgdHighlightedColor
-        }
-        else {
+        } else {
             self.setBackgroundForSelected(self.isSelected)
         }
     }
     
     
-    //MARK: - initializers
+    // MARK: - Initializers
     
     public required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -101,13 +96,11 @@ open class InputSingleCell : ValueSingleCell {
         self.addSubview(hiddenTextField)
         self.addTarget(self, action: #selector(didTouchUpInside), for: .touchUpInside)
         
-        // Set default values
-        //
         bkgdSelectedColor = nil
     }
     
     
-    //MARK: - input delegate
+    // MARK: - Input Delegate
     
     open func setInputView(_ view: UIView?) {
         hiddenTextField.inputView = view

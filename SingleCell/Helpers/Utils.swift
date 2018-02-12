@@ -31,17 +31,16 @@ import UIKit
 
 struct Utils {
     
+    // MARK: - Public vars
+    
     static let pixelSize: CGFloat = 1.0 / UIScreen.main.scale
     
     
-    //MARK: - draw arrow image
+    // MARK: - Draw Arrow Image
     
     private struct Arrow {
-        
         static let size = CGSize(width: 8, height: 14)
-        
         static let lineWidth: CGFloat = 2.0
-        
         static let points = [
             CGPoint(x: 0.75, y: 1.0),
             CGPoint(x: 6.75, y: 7.0),
@@ -50,20 +49,17 @@ struct Utils {
     }
     
     static func arrowImage(color: UIColor) -> UIImage {
-        
         if #available(iOS 10, *) {
             return drawArrowImageUsingRenderer(color: color)
-        }
-        else {
+        } else {
             return drawArrowImageUsingCoreGraphics(color: color)
         }
     }
     
     @available(iOS 10, *)
     private static func drawArrowImageUsingRenderer(color: UIColor) -> UIImage {
-        
         let renderer = UIGraphicsImageRenderer(size: Arrow.size)
-        let img = renderer.image { ctx in
+        let image = renderer.image { ctx in
             ctx.cgContext.setStrokeColor(color.cgColor)
             ctx.cgContext.setLineWidth(Arrow.lineWidth)
             
@@ -73,11 +69,10 @@ struct Utils {
             
             ctx.cgContext.strokePath()
         }
-        return img
+        return image
     }
     
     private static func drawArrowImageUsingCoreGraphics(color: UIColor) -> UIImage {
-        
         UIGraphicsBeginImageContextWithOptions(Arrow.size, false, 0.0)
         let ctx = UIGraphicsGetCurrentContext()!
         
@@ -90,9 +85,10 @@ struct Utils {
 
         ctx.strokePath()
         
-        let img = UIGraphicsGetImageFromCurrentImageContext()!
+        let image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
-        return img
+        return image
     }
+    
 }
